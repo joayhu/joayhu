@@ -52,3 +52,13 @@ contract EmergencyWithdraw {
         emergency = true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract NFTSupply {
+    uint256 public totalSupply;
+
+    function mint() external {
+        totalSupply++;
+    }
+}
