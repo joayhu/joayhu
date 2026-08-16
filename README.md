@@ -22,3 +22,13 @@ contract CampaignDeadline {
         return block.timestamp < deadline;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract PendingRewards {
+    mapping(address => uint256) public pending;
+
+    function addReward(uint256 amount) external {
+        pending[msg.sender] += amount;
+    }
+}
