@@ -72,3 +72,13 @@ contract BatchMint {
         minted += amount;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ListingPrice {
+    mapping(uint256 => uint256) public priceOf;
+
+    function list(uint256 tokenId, uint256 price) external {
+        priceOf[tokenId] = price;
+    }
+}
