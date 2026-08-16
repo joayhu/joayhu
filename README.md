@@ -1,18 +1,10 @@
-## Hi there 👋
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
 
-edit edit
+contract AuctionFinalized {
+    bool public finalized;
 
-<!--
-**joayhu/joayhu** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currenttryly learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+    function finalize() external {
+        finalized = true;
+    }
+}
