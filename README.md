@@ -62,3 +62,13 @@ contract NFTSupply {
         totalSupply++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract BatchMint {
+    uint256 public minted;
+
+    function batchMint(uint256 amount) external {
+        minted += amount;
+    }
+}
