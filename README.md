@@ -92,3 +92,13 @@ contract MintPrice {
         price = _price;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract MintedPerWallet {
+    mapping(address => uint256) public minted;
+
+    function mint() external {
+        minted[msg.sender]++;
+    }
+}
