@@ -82,3 +82,13 @@ contract ListingPrice {
         priceOf[tokenId] = price;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract MintPrice {
+    uint256 public price = 0.05 ether;
+
+    function setPrice(uint256 _price) external {
+        price = _price;
+    }
+}
