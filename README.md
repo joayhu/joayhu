@@ -118,4 +118,13 @@ contract SoulboundFlag {
     function setSoulbound(bool enabled) external {
         soulbound = enabled;
     }
+}// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract RarityScore {
+    mapping(uint256 => uint256) public rarity;
+
+    function setRarity(uint256 tokenId, uint256 score) external {
+        rarity[tokenId] = score;
+    }
 }
