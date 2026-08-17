@@ -102,3 +102,10 @@ contract MintedPerWallet {
         minted[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract NameSymbol {
+    string public name = "BaseNFT";
+    string public symbol = "BNFT";
+}
