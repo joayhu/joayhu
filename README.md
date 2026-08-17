@@ -109,3 +109,13 @@ contract NameSymbol {
     string public name = "BaseNFT";
     string public symbol = "BNFT";
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract SoulboundFlag {
+    bool public soulbound = true;
+
+    function setSoulbound(bool enabled) external {
+        soulbound = enabled;
+    }
+}
