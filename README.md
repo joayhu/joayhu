@@ -138,3 +138,13 @@ contract RarityScore {
         rarity[tokenId] = score;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ActionCounter {
+    mapping(address => uint256) public actions;
+
+    function doAction() external {
+        actions[msg.sender]++;
+    }
+}
