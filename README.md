@@ -216,3 +216,13 @@ contract ActiveQuest {
         activeQuest[msg.sender] = questId;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract TeamCaptain {
+    mapping(uint256 => address) public captain;
+
+    function setCaptain(uint256 teamId, address _captain) external {
+        captain[teamId] = _captain;
+    }
+}
