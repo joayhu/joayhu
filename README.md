@@ -167,3 +167,13 @@ contract PointsMultiplier {
         multiplier[msg.sender] = value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract SeasonClaimed {
+    mapping(uint256 => mapping(address => bool)) public claimed;
+
+    function claim(uint256 season) external {
+        claimed[season][msg.sender] = true;
+    }
+}
