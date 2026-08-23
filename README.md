@@ -177,3 +177,13 @@ contract SeasonClaimed {
         claimed[season][msg.sender] = true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract TitleSystem {
+    mapping(address => string) public title;
+
+    function setTitle(string calldata newTitle) external {
+        title[msg.sender] = newTitle;
+    }
+}
