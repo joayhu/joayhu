@@ -147,4 +147,13 @@ contract ActionCounter {
     function doAction() external {
         actions[msg.sender]++;
     }
+}// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ReferralRewards {
+    mapping(address => uint256) public rewards;
+
+    function addReward(address user, uint256 amount) external {
+        rewards[user] += amount;
+    }
 }
