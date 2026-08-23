@@ -206,4 +206,13 @@ contract EnergyRecharge {
     function recharge() external {
         lastRecharge[msg.sender] = block.timestamp;
     }
+}// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ActiveQuest {
+    mapping(address => uint256) public activeQuest;
+
+    function setActive(uint256 questId) external {
+        activeQuest[msg.sender] = questId;
+    }
 }
