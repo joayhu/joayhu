@@ -157,3 +157,13 @@ contract ReferralRewards {
         rewards[user] += amount;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract PointsMultiplier {
+    mapping(address => uint256) public multiplier;
+
+    function setMultiplier(uint256 value) external {
+        multiplier[msg.sender] = value;
+    }
+}
