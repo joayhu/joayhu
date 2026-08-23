@@ -187,3 +187,13 @@ contract TitleSystem {
         title[msg.sender] = newTitle;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ItemRarity {
+    mapping(uint256 => uint256) public rarity;
+
+    function setRarity(uint256 itemId, uint256 level) external {
+        rarity[itemId] = level;
+    }
+}
