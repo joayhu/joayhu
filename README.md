@@ -197,3 +197,13 @@ contract ItemRarity {
         rarity[itemId] = level;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract EnergyRecharge {
+    mapping(address => uint256) public lastRecharge;
+
+    function recharge() external {
+        lastRecharge[msg.sender] = block.timestamp;
+    }
+}
