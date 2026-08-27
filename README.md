@@ -226,3 +226,13 @@ contract TeamCaptain {
         captain[teamId] = _captain;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ClanLeader {
+    mapping(string => address) public leader;
+
+    function setLeader(string calldata clan, address _leader) external {
+        leader[clan] = _leader;
+    }
+}
