@@ -276,3 +276,13 @@ contract FocusStat {
         focus[msg.sender] = value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract CharismaStat {
+    mapping(address => uint256) public charisma;
+
+    function setCharisma(uint256 value) external {
+        charisma[msg.sender] = value;
+    }
+}
