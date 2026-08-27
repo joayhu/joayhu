@@ -236,3 +236,13 @@ contract ClanLeader {
         leader[clan] = _leader;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract StrengthStat {
+    mapping(address => uint256) public strength;
+
+    function setStrength(uint256 value) external {
+        strength[msg.sender] = value;
+    }
+}
