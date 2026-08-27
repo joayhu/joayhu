@@ -266,3 +266,13 @@ contract ArmorValue {
         armor[msg.sender] = value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract FocusStat {
+    mapping(address => uint256) public focus;
+
+    function setFocus(uint256 value) external {
+        focus[msg.sender] = value;
+    }
+}
