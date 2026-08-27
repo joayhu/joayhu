@@ -286,3 +286,13 @@ contract CharismaStat {
         charisma[msg.sender] = value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract SpiritStat {
+    mapping(address => uint256) public spirit;
+
+    function setSpirit(uint256 value) external {
+        spirit[msg.sender] = value;
+    }
+}
