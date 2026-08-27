@@ -246,3 +246,13 @@ contract StrengthStat {
         strength[msg.sender] = value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract LuckStat {
+    mapping(address => uint256) public luck;
+
+    function setLuck(uint256 value) external {
+        luck[msg.sender] = value;
+    }
+}
