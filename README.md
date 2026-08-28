@@ -326,3 +326,13 @@ contract RenownPoints {
         renown[msg.sender] += value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract StatusRank {
+    mapping(address => uint256) public statusRank;
+
+    function setStatus(uint256 value) external {
+        statusRank[msg.sender] = value;
+    }
+}
