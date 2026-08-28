@@ -296,3 +296,13 @@ contract SpiritStat {
         spirit[msg.sender] = value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract HonorPoints {
+    mapping(address => uint256) public honor;
+
+    function addHonor(uint256 value) external {
+        honor[msg.sender] += value;
+    }
+}
