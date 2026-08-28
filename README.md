@@ -306,3 +306,13 @@ contract HonorPoints {
         honor[msg.sender] += value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract LoyaltyPoints {
+    mapping(address => uint256) public loyalty;
+
+    function addLoyalty(uint256 value) external {
+        loyalty[msg.sender] += value;
+    }
+}
