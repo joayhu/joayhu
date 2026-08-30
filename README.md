@@ -386,3 +386,14 @@ contract InviteCount {
         invites[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract LastRating {
+    mapping(address => uint256) public lastRating;
+
+    function rate(uint256 value) external {
+        require(value >= 1 && value <= 5, "Invalid rating");
+        lastRating[msg.sender] = value;
+    }
+}
