@@ -356,3 +356,13 @@ contract CommentsCount {
         comments[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract MessageCount {
+    mapping(address => uint256) public messages;
+
+    function addMessage() external {
+        messages[msg.sender]++;
+    }
+}
