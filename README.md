@@ -346,3 +346,13 @@ contract FollowersCount {
         followers[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract CommentsCount {
+    mapping(address => uint256) public comments;
+
+    function addComment() external {
+        comments[msg.sender]++;
+    }
+}
