@@ -406,4 +406,13 @@ contract CategoryCount {
     function addCategory() external {
         categories[msg.sender]++;
     }
+}// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract ExportCount {
+    mapping(address => uint256) public exports;
+
+    function addExport() external {
+        exports[msg.sender]++;
+    }
 }
