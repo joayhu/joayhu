@@ -416,3 +416,13 @@ contract ExportCount {
         exports[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract EditCount {
+    mapping(address => uint256) public edits;
+
+    function addEdit() external {
+        edits[msg.sender]++;
+    }
+}
