@@ -426,3 +426,13 @@ contract EditCount {
         edits[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract PinCount {
+    mapping(address => uint256) public pins;
+
+    function addPin() external {
+        pins[msg.sender]++;
+    }
+}
