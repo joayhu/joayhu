@@ -445,3 +445,13 @@ contract WatchCount {
         watches[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract TipCount {
+    mapping(address => uint256) public tips;
+
+    function addTip() external {
+        tips[msg.sender]++;
+    }
+}
