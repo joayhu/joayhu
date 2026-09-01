@@ -435,4 +435,13 @@ contract PinCount {
     function addPin() external {
         pins[msg.sender]++;
     }
+}// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract WatchCount {
+    mapping(address => uint256) public watches;
+
+    function addWatch() external {
+        watches[msg.sender]++;
+    }
 }
