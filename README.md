@@ -455,3 +455,13 @@ contract TipCount {
         tips[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract UnstakeCount {
+    mapping(address => uint256) public unstakes;
+
+    function addUnstake() external {
+        unstakes[msg.sender]++;
+    }
+}
