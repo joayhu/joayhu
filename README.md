@@ -515,3 +515,13 @@ contract BasedBuilder {
         isBuilder[msg.sender] = true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract StayBased {
+    mapping(address => bool) public based;
+
+    function stayBased() external {
+        based[msg.sender] = true;
+    }
+}
