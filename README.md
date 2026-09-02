@@ -505,3 +505,13 @@ contract BaseActivity {
         activity[msg.sender] += value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract BasedBuilder {
+    mapping(address => bool) public isBuilder;
+
+    function becomeBuilder() external {
+        isBuilder[msg.sender] = true;
+    }
+}
