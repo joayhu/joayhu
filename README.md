@@ -525,3 +525,13 @@ contract StayBased {
         based[msg.sender] = true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract DeployMilestone {
+    mapping(address => uint256) public deploys;
+
+    function setDeploys(uint256 amount) external {
+        deploys[msg.sender] = amount;
+    }
+}
