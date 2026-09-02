@@ -485,3 +485,13 @@ contract GovernanceScore {
         score[msg.sender] = value;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract BuilderScore {
+    mapping(address => uint256) public score;
+
+    function addScore(uint256 value) external {
+        score[msg.sender] += value;
+    }
+}
