@@ -475,3 +475,13 @@ contract HarvestCount {
         harvests[msg.sender]++;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract GovernanceScore {
+    mapping(address => uint256) public score;
+
+    function setScore(uint256 value) external {
+        score[msg.sender] = value;
+    }
+}
