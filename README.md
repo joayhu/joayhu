@@ -535,3 +535,13 @@ contract DeployMilestone {
         deploys[msg.sender] = amount;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract CoinbaseVerified {
+    mapping(address => bool) public verified;
+
+    function verify() external {
+        verified[msg.sender] = true;
+    }
+}
