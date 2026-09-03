@@ -585,3 +585,13 @@ contract Holding100 {
         reached[msg.sender] = true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract VisitBuildPage {
+    mapping(address => bool) public visited;
+
+    function mark() external {
+        visited[msg.sender] = true;
+    }
+}
