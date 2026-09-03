@@ -545,3 +545,13 @@ contract CoinbaseVerified {
         verified[msg.sender] = true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract Active30Days {
+    mapping(address => uint256) public lastActive;
+
+    function ping() external {
+        lastActive[msg.sender] = block.timestamp;
+    }
+}
