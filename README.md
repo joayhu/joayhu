@@ -595,3 +595,13 @@ contract VisitBuildPage {
         visited[msg.sender] = true;
     }
 }
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract LearnPrefect {
+    mapping(address => bool) public unlocked;
+
+    function unlock() external {
+        unlocked[msg.sender] = true;
+    }
+}
